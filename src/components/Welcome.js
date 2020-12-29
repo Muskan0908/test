@@ -91,9 +91,9 @@ export default class Welcome extends Component {
                 <p>or Login with email</p>
                 <div className="form">
                     <form>
-                        <label for="email">Email</label><br/>
+                        <label htmlFor="email">Email</label><br/>
                         <input to="email" type="email" placeholder="Type Here"/><br/><br/>
-                        <label for="password">Password</label><br/>
+                        <label htmlFor="password">Password</label><br/>
                         <input to="password" type="password" placeholder="Type Here"/><br/><br/>
                         <button>Log In</button>
                     </form>

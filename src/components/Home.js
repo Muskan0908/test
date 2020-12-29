@@ -12,7 +12,7 @@ const Home = props => {
                 <h3>Get the latest on our COVID-19 response</h3>
             </div>
             <div className="navBar">
-                <a href="#">Switch to Hosting</a>
+                <a href="#host">Switch to Hosting</a>
                 <FiGlobe/>
                 <div className="profile">
                     <IoMdMenu/>
