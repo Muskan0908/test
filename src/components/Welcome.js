@@ -20,8 +20,8 @@ export default class Welcome extends Component {
         console.log(response);
         this.setState({
             isGoogleLoggedIn:true,
-            name:response.w3.ig,
-            email:response.w3.U3
+            name:response.profileObj.name,
+            email:response.profileObj.email
         })
       }
     responseFacebook=(response)=>{
