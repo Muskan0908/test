@@ -52,7 +52,7 @@ font-family: 'Poppins', sans-serif;
 }
 .home{
     height: 100vh;
-    background: url("/home/muskan/ReactJs/test/src/components/images/img2.jpg");
+    background: url("./images/img2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
