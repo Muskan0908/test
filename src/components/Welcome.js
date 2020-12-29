@@ -5,7 +5,8 @@ import FacebookLogin from 'react-facebook-login';
 
 export default class Welcome extends Component {
     state={
-        isLoggedIn:false,
+        isFbLoggedIn:false,
+        isGoogleLoggedIn:false,
         userID:"",
         name:"",
         email:"",
@@ -17,11 +18,14 @@ export default class Welcome extends Component {
     }
     responseGoogle = (response) => {
         console.log(response);
+        this.setState({
+            isGoogleLoggedIn:true,
+        })
       }
     responseFacebook=(response)=>{
         console.log(response);
         this.setState({
-            isLoggedIn:true,
+            isFbLoggedIn:true,
             userID:response.userID,
             name:response.name,
             email:response.email,
@@ -31,7 +35,7 @@ export default class Welcome extends Component {
     render() {
         let fbContent;
         let googleContent;
-        if(this.state.isLoggedIn){
+        if(this.state.isFbLoggedIn){
             fbContent=(
                 <div>
                     <img src={this.state.picture} alt={this.state.name}/>
@@ -39,6 +43,7 @@ export default class Welcome extends Component {
                     <h3>Email:{this.state.email}</h3>
                 </div>
             );
+            googleContent=null;
         }
         else{
             fbContent=(
@@ -50,15 +55,22 @@ export default class Welcome extends Component {
     callback={this.responseFacebook} />
             );
         }
+
+        if(this.state.isGoogleLoggedIn){
+            googleContent=null;
+            fbContent=null;
+        }
+        else{
         googleContent=(
             <GoogleLogin
-    clientId="628582513251-8k12u35sjl2t770hj5h5ti72r48537m2.apps.googleusercontent.com"
-    buttonText="Login"
-    onSuccess={this.responseGoogle}
-    onFailure={this.responseGoogle}
-    cookiePolicy={'single_host_origin'}
-  />
+            clientId="628582513251-8k12u35sjl2t770hj5h5ti72r48537m2.apps.googleusercontent.com"
+            buttonText="Login"
+            onSuccess={this.responseGoogle}
+            onFailure={this.responseGoogle}
+            cookiePolicy={'single_host_origin'}
+            />
         );
+        }
         return (
             <div>
                 {fbContent}
