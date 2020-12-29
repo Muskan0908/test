@@ -72,7 +72,7 @@ export default class Welcome extends Component {
         else{
         googleContent=(
             <GoogleLogin
-            clientId="628582513251-8k12u35sjl2t770hj5h5ti72r48537m2.apps.googleusercontent.com"
+            clientId="628582513251-0la2kreu7u5738mu9mfmd2e8gov4ouom.apps.googleusercontent.com"
             buttonText="Login"
             onSuccess={this.responseGoogle}
             onFailure={this.responseGoogle}
