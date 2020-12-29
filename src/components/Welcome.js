@@ -20,6 +20,8 @@ export default class Welcome extends Component {
         console.log(response);
         this.setState({
             isGoogleLoggedIn:true,
+            name:response.w3.ig,
+            email:response.w3.U3
         })
       }
     responseFacebook=(response)=>{
@@ -43,7 +45,6 @@ export default class Welcome extends Component {
                     <h3>Email:{this.state.email}</h3>
                 </div>
             );
-            googleContent=null;
         }
         else{
             fbContent=(
@@ -57,8 +58,13 @@ export default class Welcome extends Component {
         }
 
         if(this.state.isGoogleLoggedIn){
-            googleContent=null;
-            fbContent=null;
+            googleContent=(
+                <div>
+                    <h2>Welcome {this.state.name}</h2>
+                    <h3>Email:{this.state.email}</h3>
+                </div>
+            );
+           
         }
         else{
         googleContent=(
