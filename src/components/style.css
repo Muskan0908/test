@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;  
+font-family: 'Poppins', sans-serif;  
+
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:90%;
+    padding: 1rem;
+}
+.login-option{
+    width: 100%;
+    height: 10vh;
+    margin: 5%;
+}
+.app h2{
+    margin:2%;
+}
+.app p{
+    color: gray;
+}
+.app input{
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+.app button{
+    width: 30%;
+    border:2px solid black;
+  padding: 1rem;
+}
+
+.navBar{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    align-items: center;
+}
+.navBar a{
+    text-decoration: none;
+    color: black;
+}
+.home h4{
+    text-decoration: underline;
+}
+.home{
+    height: 100vh;
+    background: url("/home/muskan/ReactJs/test/src/components/images/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+}
+.top{
+    background: black;
+    height: 5vh;
+    color: whitesmoke;
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    padding: 1rem;
+    background: white;
+    border-radius: 50px;
+}
+.filter-item{
+    padding: 10px;
+    border-right: 1px solid black;
+}
+.filter-item-l{
+    cursor: pointer;
+    margin-right: 20px;
+}
+.filter-item:hover{
+    cursor: pointer;
+}
+.search{
+    width: 40px;
+    border-radius: 50%;
+    background: blueviolet;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.title{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 40px;
+    padding: 1rem;
+    margin-left: 5%;
+}
+.title-item input{
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.profile{
+    align-items: center;
+    margin: 10px;
+    background: white;
+    border-radius: 40%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:768px){
+    .filter{
+        display: flex;
+        flex-direction: column;
+    }
+    .filter-item{
+        padding: 10px;
+        border-right: 0;
+    }
+    
+}
+@media screen and (max-width:400px){
+    .top{
+        height: 12vh;
+    }
+}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
-
+import {Link} from 'react-router-dom';
+import './style.css';
 
 export default class Welcome extends Component {
     state={
@@ -21,7 +22,8 @@ export default class Welcome extends Component {
         this.setState({
             isGoogleLoggedIn:true,
             name:response.profileObj.name,
-            email:response.profileObj.email
+            email:response.profileObj.email,
+            picture:response.profileObj.imageUrl
         })
       }
     responseFacebook=(response)=>{
@@ -45,6 +47,7 @@ export default class Welcome extends Component {
                     <h3>Email:{this.state.email}</h3>
                 </div>
             );
+            
         }
         else{
             fbContent=(
@@ -78,9 +81,23 @@ export default class Welcome extends Component {
         );
         }
         return (
-            <div>
-                {fbContent}
-                {googleContent}
+            <div className="app">
+                <h2>Log in</h2><br/>
+                <div className="login-option">
+                    <Link to="/home" >{fbContent}</Link>
+                    <Link to="/home">{googleContent}</Link>
+                </div>
+                <br/>
+                <p>or Login with email</p>
+                <div className="form">
+                    <form>
+                        <label for="email">Email</label><br/>
+                        <input to="email" type="email" placeholder="Type Here"/><br/><br/>
+                        <label for="password">Password</label><br/>
+                        <input to="password" type="password" placeholder="Type Here"/><br/><br/>
+                        <button>Log In</button>
+                    </form>
+                </div>
             </div>
         )
     }
