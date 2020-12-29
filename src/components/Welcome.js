@@ -84,8 +84,8 @@ export default class Welcome extends Component {
             <div className="app">
                 <h2>Log in</h2><br/>
                 <div className="login-option">
-                    <Link to="/home" >{fbContent}</Link>
-                    <Link to="/home">{googleContent}</Link>
+                    <Link to="/test/home" >{fbContent}</Link>
+                    <Link to="/test/home">{googleContent}</Link>
                 </div>
                 <br/>
                 <p>or Login with email</p>
