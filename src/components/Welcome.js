@@ -60,6 +60,9 @@ export default class Welcome extends Component {
             );*/
             return(
                 <div>
+                    <img src={this.state.picture} alt={this.state.name}/>
+                    <h2>Welcome {this.state.name}</h2>
+                    <h3>Email:{this.state.email}</h3>
                     <Link to="/home">Continue</Link>
                 </div>
             )
@@ -76,12 +79,20 @@ export default class Welcome extends Component {
         }
 
         if(this.state.isGoogleLoggedIn){
-            googleContent=(
+            /*googleContent=(
                 <div>
                     <h2>Welcome {this.state.name}</h2>
                     <h3>Email:{this.state.email}</h3>
                 </div>
-            );
+            );*/
+            return(
+                <div>
+                    <img src={this.state.picture} alt={this.state.name}/>
+                    <h2>Welcome {this.state.name}</h2>
+                    <h3>Email:{this.state.email}</h3>
+                    <Link to="/home">Continue</Link>
+                </div>
+            )
            
         }
         else{
@@ -99,8 +110,8 @@ export default class Welcome extends Component {
             <div className="app">
                 <h2>Log in</h2><br/>
                 <div className="login-option">
-                    <Link to="/home" >{fbContent}</Link>
-                    <Link to="/home">{googleContent}</Link>
+                    {fbContent}
+                    {googleContent}
                 </div>
                 <br/>
                 <p>or Login with email</p>
