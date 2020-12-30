@@ -26,6 +26,9 @@ export default class Welcome extends Component {
             picture:response.profileObj.imageUrl
         })
       }
+      responseFailureGoogle=(response)=>{
+          console.log(response);
+      }
     responseFacebook=(response)=>{
         console.log(response);
         this.setState({
@@ -35,19 +38,31 @@ export default class Welcome extends Component {
             email:response.email,
             picture:response.picture.data.url
         })
+        /*return(
+            <div>
+            <img src={this.state.picture} alt={this.state.name}/>
+            <h2>Welcome {this.state.name}</h2>
+            <h3>Email:{this.state.email}</h3>
+            
+        </div>
+        )*/
     }
     render() {
         let fbContent;
         let googleContent;
         if(this.state.isFbLoggedIn){
-            fbContent=(
+            /*fbContent=(
                 <div>
                     <img src={this.state.picture} alt={this.state.name}/>
                     <h2>Welcome {this.state.name}</h2>
                     <h3>Email:{this.state.email}</h3>
                 </div>
-            );
-            
+            );*/
+            return(
+                <div>
+                    <Link to="/home">Continue</Link>
+                </div>
+            )
         }
         else{
             fbContent=(
@@ -75,7 +90,7 @@ export default class Welcome extends Component {
             clientId="628582513251-0la2kreu7u5738mu9mfmd2e8gov4ouom.apps.googleusercontent.com"
             buttonText="Login"
             onSuccess={this.responseGoogle}
-            onFailure={this.responseGoogle}
+            onFailure={this.responseFailureGoogle}
             cookiePolicy={'single_host_origin'}
             />
         );
