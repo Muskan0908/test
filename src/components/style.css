@@ -116,7 +116,15 @@ font-family: 'Poppins', sans-serif;
     padding: 5px;
     cursor: pointer;
 }
-
+.loggedIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: rgb(238, 190, 128);
+    color:rgb(63, 3, 63)
+}
 
 @media screen and (max-width:768px){
     .filter{

@@ -59,10 +59,10 @@ export default class Welcome extends Component {
                 </div>
             );*/
             return(
-                <div>
+                <div className="loggedIn">
                     <img src={this.state.picture} alt={this.state.name}/>
                     <h2>Welcome {this.state.name}</h2>
-                    <h3>Email:{this.state.email}</h3>
+                    <h3>Email:  {this.state.email}</h3>
                     <Link to="/home">Continue</Link>
                 </div>
             )
@@ -86,10 +86,10 @@ export default class Welcome extends Component {
                 </div>
             );*/
             return(
-                <div>
+                <div className="loggedIn">
                     <img src={this.state.picture} alt={this.state.name}/>
                     <h2>Welcome {this.state.name}</h2>
-                    <h3>Email:{this.state.email}</h3>
+                    <h3>Email:  {this.state.email}</h3>
                     <Link to="/home">Continue</Link>
                 </div>
             )
