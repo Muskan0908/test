@@ -110,8 +110,8 @@ export default class Welcome extends Component {
             <div className="app">
                 <h2>Log in</h2><br/>
                 <div className="login-option">
-                    {fbContent}
-                    {googleContent}
+                   <div className="fb">{fbContent}</div> 
+                   <div className="ggl">{googleContent}</div>
                 </div>
                 <br/>
                 <p>or Login with email</p>

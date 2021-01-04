@@ -20,6 +20,7 @@ font-family: 'Poppins', sans-serif;
     height: 10vh;
     margin: 5%;
 }
+
 .app h2{
     margin:2%;
 }
@@ -125,7 +126,24 @@ font-family: 'Poppins', sans-serif;
     background: rgb(238, 190, 128);
     color:rgb(63, 3, 63)
 }
-
+.login-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100vw;
+    height: 20vh;
+    padding: 1rem;
+    margin: 0%;
+       }
+    .fb{
+        width: 100vw;
+        padding: 1rem;
+    }
+    .ggl{
+        width: 100vw;
+    }
 @media screen and (max-width:768px){
     .filter{
         display: flex;
@@ -135,6 +153,25 @@ font-family: 'Poppins', sans-serif;
         padding: 10px;
         border-right: 0;
     }
+    .login-option{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        width: 100vw;
+        height: 20vh;
+        padding: 1rem;
+        margin: 0%;
+        text-align: center;
+           }
+        .fb{
+            width: 100vw;
+            padding: 1rem;
+        }
+        .ggl{
+            width: 100vw;
+        }
     
 }
 @media screen and (max-width:400px){
